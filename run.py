@@ -46,7 +46,7 @@ cobaycpd.apply()
 
 print(cobaycpd.changepoints)
 mse = np.sum((tt - cobaycpd.pred_mean)**2) / len(tt)
-mae = np.sum((tt - cobaycpd.pred_mean)) / len(tt)
+mae = np.sum(np.abs(tt - cobaycpd.pred_mean)) / len(tt) # updated 
 print("mse=", mse)
 print("mae=", mae)
 
